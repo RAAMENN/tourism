@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">推荐</div>
     <ul>
-      <li class="recommend-item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="recommend-item border-bottom" v-for="item of recommend" :key="item.id">
         <img :src="item.imgUrl" class="item-img">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,25 +17,8 @@
 <script type='text/ecmascript-6'>
 export default {
   name: 'HomeRecommand',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1712/95/95f38f28a6ff19cba3.img.jpg_200x200_af967e35.jpg',
-        title: '水奥雪世界',
-        desc: 'desc'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1712/95/95f38f28a6ff19cba3.img.jpg_200x200_af967e35.jpg',
-        title: '水奥雪世界',
-        desc: 'desc'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1712/95/95f38f28a6ff19cba3.img.jpg_200x200_af967e35.jpg',
-        title: '水奥雪世界',
-        desc: 'desc'
-      }]
-    }
+  props: {
+    recommend: Array
   }
 }
 </script>
