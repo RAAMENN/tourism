@@ -1,13 +1,18 @@
 <template>
-  <city-header></city-header>
+  <div>
+    <city-header></city-header>
+    <city-search></city-search>
+  </div>
 </template>
 
 <script type='text/ecmascript-6'>
+import citySearch from './components/Search'
 import cityHeader from './components/Header'
 export default {
   name: 'city',
   components: {
-    cityHeader
+    cityHeader,
+    citySearch
   }
 }
 </script>
